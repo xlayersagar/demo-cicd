@@ -1,0 +1,23 @@
+<!-- src/app/signup/signup.component.html -->
+<body style="margin-bottom: 220px;">
+<div class="ko" >"Join Us Today and Get Started!"
+
+</div>
+
+
+<div class="signup-container">
+  <h1 style="color: black; font-size: 35px;">Sign Up</h1><br><br><br>
+  <form (submit)="onSignupSubmit()">
+    <div class="form-group">
+      <label for="username" style="font-size: 20px;  padding-right: 6px;">Username:  </label>
+      <input type="text" id="username" [(ngModel)]="username" name="username" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="password" style="font-size: 20px;  padding-right: 13px;">Password:</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" required>
+    </div><br><br><br>
+    <button type="submit">Sign Up</button>
+  </form>
+</div>
+</body>

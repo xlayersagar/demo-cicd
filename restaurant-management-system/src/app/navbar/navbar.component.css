@@ -1,0 +1,54 @@
+/* CSS for the navigation menu */
+
+nav {
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #333; /* Fallback color if the image is not available or fully covered */
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  nav li {
+    padding: 10px 20px;
+  }
+  
+  nav li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav li a:hover {
+    background-color: #555;
+  }
+  
+  nav li.active a {
+    background-color: #777;
+  }
+  
+  nav li:last-child {
+    margin-left: auto;
+  }
+  
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%; /* Adjusted to full width for smaller screens */
+  }
+
+  input,
+  textarea {
+    width: 100%; /* Adjusted to full width for smaller screens */
+  }
+
+  button {
+    margin-right: 0; /* Removed margin-right for smaller screens */
+  }
+}

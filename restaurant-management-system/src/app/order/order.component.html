@@ -1,0 +1,25 @@
+<body style="margin-bottom: -160px;">
+  <div class="order-container">
+  <div class="order-card">
+    <h1 class="order-heading">Order list</h1>
+    <ul class="order-list">
+      <li *ngFor="let item of cartItems" class="order-item">
+        <p><strong>Name:</strong> {{ item.name }}</p>
+        <p><strong>Price:</strong> {{ item.price }}</p>
+        <p><strong>Description:</strong> {{ item.description }}</p>
+
+        <div class="quantity-controls">
+          <button (click)="decrementQuantity(item)">-</button>
+          <p class="quantity">{{ item.quantity }}</p>
+          <button (click)="incrementQuantity(item)">+</button><br>
+        </div><br>
+
+        <div class="action-buttons">
+          <button (click)="confirmOrder(item)">Confirm Order</button><br>
+          <button (click)="deleteItem(item)">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>

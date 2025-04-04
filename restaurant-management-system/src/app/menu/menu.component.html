@@ -1,0 +1,44 @@
+<form (ngSubmit)="addItem()" style="margin-top: 30px; margin-bottom: 470px;">
+  <label for="name" style="color: white;">Name:</label>
+  <input type="text" name="name" [(ngModel)]="newItemName" required><br>
+
+
+  <label for="price" style="color: white;">Price:</label>
+  <input type="number" name="price" [(ngModel)]="newItemPrice" required><br>
+
+  <label for="description" style="color: white;">Description:</label>
+  <textarea name="description" [(ngModel)]="newItemDescription" required></textarea><br>
+
+  <button type="submit" style="color: white;">Add Item</button>
+</form>
+
+<div *ngIf="menuItems.length > 0" class="form-group" style="margin-top: -250px;">
+  <ul>
+    <li *ngFor="let item of menuItems">
+      <p><strong>Name:</strong> {{ item.name }}</p>
+      <p><strong>Price:</strong> {{ item.price }}</p>
+      <p><strong>Description:</strong> {{ item.description }}</p>
+      <button (click)="editItem(item)">Edit</button>
+      <button (click)="deleteItem(item)">Delete</button>
+
+      <button (click)="addToCart(item)">Add To Cart</button>
+
+      <div *ngIf="selectedItem === item" class="form-group">
+        <h2>Edit Item</h2>
+        <form (ngSubmit)="updateItem()">
+          <label for="edit-name">Name:</label>
+          <input type="text" name="edit-name" [(ngModel)]="editItemName" required>
+
+          <label for="edit-price">Price:</label>
+          <input type="number" name="edit-price" [(ngModel)]="editItemPrice" required>
+
+          <label for="edit-description">Description:</label>
+          <textarea name="edit-description" [(ngModel)]="editItemDescription" required></textarea>
+
+          <button type="submit">Update Item</button>
+          <button type="button" (click)="cancelEdit()">Cancel</button>
+        </form>
+      </div>
+    </li>
+  </ul>
+</div>

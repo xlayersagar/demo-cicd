@@ -1,0 +1,22 @@
+<body><header>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a routerLink="/menu" routerLinkActive="active">Menu</a></li>
+      <li><a routerLink="/order" routerLinkActive="active">Order</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+      <li><a routerLink="/aboutus" routerLinkActive="active">AboutUS</a></li>
+      <li *ngIf="showLogoutLink()"><a routerLink="/logout" routerLinkActive="active" (click)="onLogout()">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <!-- Router Outlet to display the routed components -->
+  <router-outlet></router-outlet>
+</main>
+<footer class="fixed-footer">
+  <!-- Footer content goes here -->
+  <p>&copy; 2023 Website. Created by bit-nerds.</p>
+</footer>
+
+

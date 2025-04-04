@@ -1,0 +1,97 @@
+/* CSS for the header and navigation bar */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-image: url('../assets/img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f1f1f1;
+    
+  }
+  
+  app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav li:last-child {
+    margin-right: 0;
+  }
+  
+  nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  nav li a:hover {
+    background-color: #555;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav li.active a {
+    background-color: #777;
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    /* Adjust the padding/margin to give enough space for the footer */
+    padding-bottom: 80px;
+}
+
+.fixed-footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 1px 0;
+    text-align: center;
+    margin-bottom: 50px;
+    
+    
+
+}
